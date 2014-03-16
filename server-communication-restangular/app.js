@@ -27,13 +27,14 @@ app.controller('scNavBarLoginCtrl', function($scope, notifier, users, identity){
 });
 
 app.controller('scCatalogCtrl', function($scope, notifier, followedInstructors){
-   // console.log($scope.followedInstructors);
+    console.log($scope.followedInstructors);
 
     $scope.registerCourse = function(course) {
     course.registered = true;
     course.post();
     notifier.notify('You have registered for ' + course.name);
   }
+    console.log($scope.followedInstructors);
 
   $scope.followInstructor = function(instructorName) {
     var found = false;
@@ -45,13 +46,13 @@ app.controller('scCatalogCtrl', function($scope, notifier, followedInstructors){
     if(!found) {
       $scope.followedInstructors.push({name: instructorName});
       followedInstructors.save($scope.followedInstructors);
-      console.log($scope.followedInstructors);
+      //console.log($scope.followedInstructors);
       notifier.notify('You are now following ' + instructorName);
     }
 
   }
-    console.log($scope.followedInstructors);
-    console.log(followedInstructors);
+    //console.log($scope.followedInstructors);
+    //console.log(followedInstructors);
 });
 
 app.controller('scScheduleCtrl', function($scope, notifier){
@@ -76,12 +77,12 @@ app.controller('scRegistrationCtrl',function($scope, toastr, catalog, identity, 
   $scope.catalog = catalog.getList();
     catalog.getList().then(function(accounts) {
         $scope.allAccounts = accounts;
-        console.log(accounts[0]);
+        //console.log(accounts[0]);
         $scope.account = accounts[0];
     })
     catalog.get(1).then(function(course) {
         $scope.coursea = course;
-        console.log(course);
+        //console.log(course);
     })
     //console.log($scope.coursea);
 
