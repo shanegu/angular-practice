@@ -1,0 +1,8 @@
+**/.DS_Store
+writing-directives/nbproject
+writing-directives/manifest.mf
+writing-directives/build.xml
+
+writing-directives/.project
+writing-directives/.settings
+writing-directives/.idea/*
