@@ -6,5 +6,5 @@ writing-directives/build.xml
 writing-directives/.project
 writing-directives/.settings
 writing-directives/.idea/*
-server-communication-restangular/.idea
+server-communication-restangular/.idea/*
 
